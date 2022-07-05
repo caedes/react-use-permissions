@@ -11,30 +11,26 @@ export const usePermissions = (roles) => {
   return { can };
 };
 
-export const PermissionsProvider = ({ children, permissions }) => {
-  const canWithRoles =
-    (roles) =>
-    ({ action, resource }) => {
-      const currentUserPermissions = flatten(
-        uniq(values(pick(roles, permissions)))
-      );
+export const PermissionsProvider = ({ children, permissions = {} }) => {
+  const canWithRoles = (roles) => (action, resource) => {
+    const currentUserPermissions = flatten(
+      uniq(values(pick(roles, permissions)))
+    );
 
-      const currentUserResourcePermissions = currentUserPermissions.filter(
-        (permisssion) => permisssion.resource === resource
-      );
+    const currentUserResourcePermissions = currentUserPermissions.filter(
+      (permission) => permission.resource === resource
+    );
 
-      const currentUserResourceActions = uniq(
-        flatten(
-          currentUserResourcePermissions.map(
-            (permisssion) => permisssion.action
-          )
-        )
-      );
+    const currentUserResourceActions = uniq(
+      flatten(
+        currentUserResourcePermissions.map((permisssion) => permisssion.action)
+      )
+    );
 
-      if (currentUserResourceActions.includes("*")) return true;
+    if (currentUserResourceActions.includes("*")) return true;
 
-      return currentUserResourceActions.includes(action);
-    };
+    return currentUserResourceActions.includes(action);
+  };
 
   const value = {
     canWithRoles,
