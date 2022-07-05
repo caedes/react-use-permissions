@@ -1,8 +1,11 @@
 {
   "name": "@caedes/react-use-permissions",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "source": "src/index.js",
   "main": "dist/main.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "npx parcel build",
     "test": "node ./scripts/test.js"
