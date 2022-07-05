@@ -1,0 +1,21 @@
+{
+  "name": "@caedes/react-use-permissions",
+  "version": "0.1.0",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "npx parcel build"
+  },
+  "author": {
+    "name": "caedes",
+    "url": "https://github.com/caedes"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  },
+  "peerDependencies": {
+    "ramda": "^0.28.0",
+    "react": "^18.2.0"
+  }
+}
