@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
 
-import { PermissionsProvider, usePermissions } from "./";
+import { PermissionsProvider, usePermissions } from ".";
 
 const TestedComponent = ({ roles = [] }) => {
   const { can } = usePermissions(roles);

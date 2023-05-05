@@ -1,14 +1,14 @@
 {
   "name": "@caedes/react-use-permissions",
   "version": "1.0.2",
-  "source": "src/index.js",
+  "source": "src/index.jsx",
   "main": "dist/main.js",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "npx parcel build",
-    "test": "node ./scripts/test.js"
+    "build": "parcel build",
+    "test": "vitest"
   },
   "author": {
     "name": "caedes",
@@ -21,13 +21,12 @@
     "@babel/preset-react": "^7.18.6",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "babel-jest": "^28.1.2",
-    "jest": "^28.1.2",
-    "jest-environment-jsdom": "^28.1.2",
+    "jsdom": "^22.0.0",
     "parcel": "^2.6.2",
     "ramda": "^0.28.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vitest": "^0.31.0"
   },
   "peerDependencies": {
     "ramda": "^0.28.0",
