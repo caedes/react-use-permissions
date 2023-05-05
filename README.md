@@ -83,3 +83,25 @@ const permissions = {
   admin: [...developerPermissions, { action: "*", resource: "issue" }],
 };
 ```
+
+## Contribution
+
+Install the repository:
+
+```shell
+git clone https://github.com/caedes/react-use-permissions.git
+```
+
+Then the dependencies:
+
+```shell
+yarn
+```
+
+Run the test suite before commiting:
+
+```shell
+yarn test
+```
+
+And offer your PR! 🚀
