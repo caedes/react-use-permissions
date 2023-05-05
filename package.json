@@ -1,6 +1,6 @@
 {
   "name": "@caedes/react-use-permissions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "source": "src/index.js",
   "main": "dist/main.js",
   "files": [
